@@ -36,32 +36,46 @@ body {
 }
 
 /* Portrait layout (default) */
-.app {
-    background:url(../img/logo.png) no-repeat center center;
+#splashScreen {
+	background:url(../img/bg.png) repeat;
+	/* Set rules to fill background */
+	min-height: 100%;
+	min-width: 100%;
+		
+	/* Set up proportionate scaling */
+	width: 100%;
+	height: auto;
+		
+	/* Set up positioning */
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+#logo{
+	background: transparent url(../img/logo.png) center center no-repeat;
 	background-size: 200px 170px;
-	position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
+	width: 200px;
+	height: 170px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -85px 0 0 -100px;
 }
 
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:center center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
-    }
-}
-
- 
-.blink {
-    animation:fade 1000ms infinite;
-    -webkit-animation:fade 1000ms infinite;
+.view{
+	/* Set rules to fill background */
+	min-height:100%;
+	min-width: 100%;
+		
+	/* Set up proportionate scaling */
+	width: 100%;
+	height: auto;
+		
+	/* Set up positioning */
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
 }
